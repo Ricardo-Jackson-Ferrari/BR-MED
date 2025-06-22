@@ -26,7 +26,9 @@ DEFAULT_APPS = [
     "django.contrib.staticfiles",
 ]
 
-OWNER_APPS = []
+OWNER_APPS = [
+    "common",
+]
 
 THIRD_PARTY_APPS = []
 
