@@ -28,6 +28,7 @@ DEFAULT_APPS = [
 
 OWNER_APPS = [
     "common",
+    "rates",
 ]
 
 THIRD_PARTY_APPS = []
@@ -104,3 +105,5 @@ STATIC_ROOT = "staticfiles"
 STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+BASE_CURRENCY_SYMBOL = "USD"
