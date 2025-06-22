@@ -251,6 +251,9 @@
           });
         } else {
           const p = document.createElement('p');
+          if (error instanceof TypeError && error.message === 'Failed to fetch') {
+              error.message = "Não foi possível conectar com o servidor. Verifique sua conexão ou tente novamente mais tarde.";
+          }
           p.textContent = error.message.replace(/^"|"$/g, '');
           errorBox.appendChild(p);
         }
