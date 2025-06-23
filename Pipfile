@@ -10,6 +10,8 @@ requests = "*"
 djangorestframework = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 black = "*"

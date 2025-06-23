@@ -1,0 +1,13 @@
+SECRET_KEY=django-insecure-s=2sbbvwlou)q-(3&9=ui6z)lm=y(csz0szb7n4pw1kzzdz$cx
+DEBUG=True
+ALLOWED_HOSTS=*
+
+POSTGRES_USER=myuser
+POSTGRES_PASSWORD=mypassword
+POSTGRES_DB=mydb
+
+DB_HOST=db
+DB_PORT=5432
+DATABASE_URL=postgres://myuser:mypassword@db:5432/mydb
+
+DB_SSLMODE=False
