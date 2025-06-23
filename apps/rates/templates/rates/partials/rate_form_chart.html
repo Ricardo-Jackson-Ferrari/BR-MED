@@ -218,10 +218,20 @@
       if (!data.chart_dates?.length || !data.chart_data?.length) {
         throw new Error("Nenhum dado disponível para o período selecionado.");
       }
+      const chartData = data.chart_dates.map((dateStr, i) => {
+        const timestamp = new Date(dateStr).getTime();
+        return [timestamp, data.chart_data[i]];
+      });
 
       Highcharts.chart('chart-container', {
         title: { text: 'Histórico de Cotação' },
-        xAxis: { categories: data.chart_dates },
+        xAxis: {
+          type: 'datetime',
+          labels: {
+            format: '{value:%d/%m/%Y}',
+          },
+          title: { text: 'Data' }
+        },
         yAxis: {
           title: {
             text: 'Valor'
@@ -234,7 +244,7 @@
         },
         series: [{
           name: data.target_currency,
-          data: data.chart_data
+          data: chartData
         }]
       });
 
